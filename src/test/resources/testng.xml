@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite parallel="methods" thread-count="2" name="Suite">
+
+    <listeners>
+        <listener class-name="com.epam.cdp.listeners.TestListeners"></listener>
+    </listeners>
+
+    <test name="trigonometry_tests">
+        <groups>
+            <run>
+                <include name="trigonometry_tests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.cdp.TestNG.TgCalTest"/>
+            <class name="com.epam.cdp.TestNG.SinCalTest"/>
+            <class name="com.epam.cdp.TestNG.CtgCalTest"/>
+            <class name="com.epam.cdp.TestNG.CosCalTest"/>
+        </classes>
+    </test>
+
+    <test name="mathematic_tests">
+        <groups>
+            <run>
+                <include name="mathematic_tests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.cdp.TestNG.SumCalTest"/>
+            <class name="com.epam.cdp.TestNG.SubCalTest"/>
+            <class name="com.epam.cdp.TestNG.SqrtCalTest"/>
+            <class name="com.epam.cdp.TestNG.PowCalTest"/>
+            <class name="com.epam.cdp.TestNG.MultCalTest"/>
+            <class name="com.epam.cdp.TestNG.IsPositiveCalTest"/>
+            <class name="com.epam.cdp.TestNG.IsNegativeCalTest"/>
+        </classes>
+    </test>
+</suite>
